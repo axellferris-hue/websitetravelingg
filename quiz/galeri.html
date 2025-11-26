@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeri - Travel Explore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Travel Explore</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinasi.html">Destinasi</a></li>
+        <li><a href="tips.html">Tips Traveling</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+    </ul>
+</nav>
+
+<section class="section">
+    <h2>Galeri Foto</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+        <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+    </div>
+</section>
+<script>
+// DARK MODE
+const btn = document.createElement('button');
+btn.innerText = "Dark Mode";
+btn.classList.add("dark-mode-btn");
+document.querySelector("nav").appendChild(btn);
+
+btn.onclick = () => {
+    document.body.classList.toggle("dark");
+};
+
+// SCROLL TO TOP
+let topBtn = document.createElement("div");
+topBtn.id = "topBtn";
+topBtn.innerText = "↑ Top";
+document.body.appendChild(topBtn);
+
+window.onscroll = () => {
+    if (document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+topBtn.onclick = () => {
+    window.scrollTo({top:0, behavior:"smooth"});
+};
+</script>
+>
+</body>
+</html>
